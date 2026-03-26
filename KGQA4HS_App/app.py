@@ -14,7 +14,7 @@ print("🔥 REAL APP WITH NEO4J RUNNING")
 # -------------------------------
 driver = GraphDatabase.driver(
     "bolt://localhost:7687",
-    auth=("neo4j", "avni16313")
+    auth=("name", "pass")
 )
 
 # -------------------------------
