@@ -1,0 +1,113 @@
+{
+  "domain": "mahabharata",
+  "questions": [
+    {
+      "id": "M01",
+      "question": "Who trained Arjuna in celestial weapons?",
+      "cypher": "MATCH p=(s:Entity)-[:TRAINED]->(o:Entity {name:'Arjuna'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "M02",
+      "question": "Who was Bhishma’s guru?",
+      "cypher": "MATCH p=(s:Entity)-[:TAUGHT]->(o:Entity {name:'Bhishma'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "M03",
+      "question": "Who protected Abhimanyu in the Chakravyuha?",
+      "cypher": "MATCH p=(o:Entity {name:'Abhimanyu'})<-[:DEFENDEDBY]-(s:Entity) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "M04",
+      "question": "Who taught Bhima the art of mace combat?",
+      "cypher": "MATCH p=(s:Entity)-[:TAUGHT]->(o:Entity {name:'Bhima'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "M05",
+      "question": "Who advised Yudhishthira during dice game?",
+      "cypher": "MATCH p=(s:Entity)-[:COUNSELED]->(o:Entity {name:'Yudhishthira'}) RETURN s.name AS Answer, p;"
+    },
+{
+  "id": "M06",
+  "question": "Who was Karna’s charioteer?",
+  "cypher": "MATCH p=(s:Entity {name:'Shalya'})-[:DROVE]->(o:Entity {name:'Karna'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M07",
+  "question": "Who pierced the Kaurava army with arrows?",
+  "cypher": "MATCH p=(s:Entity {name:'Arjuna'})-[:STRUCK]->(o:Entity {name:'Kauravas'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M08",
+  "question": "Who saved Draupadi from humiliation?",
+  "cypher": "MATCH p=(s:Entity {name:'Krishna'})-[:PROTECTED]->(o:Entity {name:'Draupadi'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M09",
+  "question": "Who was Abhimanyu’s father?",
+  "cypher": "MATCH p=(s:Entity {name:'Arjuna'})-[:FATHEROF]->(o:Entity {name:'Abhimanyu'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M10",
+  "question": "Who granted Duryodhana invincibility?",
+  "cypher": "MATCH p=(s:Entity {name:'Shakuni'})-[:BLESSED]->(o:Entity {name:'Duryodhana'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M11",
+  "question": "Who guided Bhishma in battle strategy?",
+  "cypher": "MATCH p=(s:Entity {name:'Krishna'})-[:ADVISED]->(o:Entity {name:'Bhishma'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M12",
+  "question": "Who trained Nakula in swordsmanship?",
+  "cypher": "MATCH p=(s:Entity {name:'Drona'})-[:TRAINED]->(o:Entity {name:'Nakula'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M13",
+  "question": "Who carried messages between Pandavas?",
+  "cypher": "MATCH p=(s:Entity {name:'Sanjaya'})-[:DELIVERED]->(o:Entity {name:'Message'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M14",
+  "question": "Who advised Bhima to fight Duryodhana?",
+  "cypher": "MATCH p=(s:Entity {name:'Krishna'})-[:ADVISED]->(o:Entity {name:'Bhima'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M15",
+  "question": "Who cursed Karna for arrogance?",
+  "cypher": "MATCH p=(s:Entity {name:'Parashurama'})-[:CURSED]->(o:Entity {name:'Karna'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M16",
+  "question": "Who prevented Ashwatthama from killing Pandavas?",
+  "cypher": "MATCH p=(s:Entity {name:'Krishna'})-[:STOPPED]->(o:Entity {name:'Ashwatthama'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M17",
+  "question": "Who was Shikhandi’s father?",
+  "cypher": "MATCH p=(s:Entity {name:'Drupada'})-[:FATHEROF]->(o:Entity {name:'Shikhandi'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M18",
+  "question": "Who led the elephant corps in Kurukshetra?",
+  "cypher": "MATCH p=(s:Entity {name:'Bhima'})-[:COMMANDED]->(o:Entity {name:'Elephants'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "M19",
+  "question": "Who healed Duryodhana after battle injury?",
+  "cypher": "MATCH p=(s:Entity {name:'Susharma'})-[:HEALED]->(o:Entity {name:'Duryodhana'}) RETURN s.name AS Answer, p;"
+}
+  ]
+}

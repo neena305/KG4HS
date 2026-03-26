@@ -1,0 +1,80 @@
+{
+  "domain": "Vedas",
+  "questions": [
+    {
+      "id": "V01",
+      "question": "Who carries offerings to the Devas?",
+      "cypher": "MATCH p=(s:Entity)-[:CARRIES]->()-->(:Entity {name:'Devas'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V02",
+      "question": "Who gives energy?",
+      "cypher": "MATCH p=(s:Entity)-[:GIVES]->(:Entity {name:'energy'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V03",
+      "question": "Which entity mentions hymns?",
+      "cypher": "MATCH p=(s:Entity)-[:MENTIONS]->(:Entity {name:'hymn'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V04",
+      "question": "Who controls breath?",
+      "cypher": "MATCH p=(s:Entity)-[:CONTROLS]->(:Entity {name:'breath'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V05",
+      "question": "Who wields the thunderbolt?",
+      "cypher": "MATCH p=(s:Entity)-[:WIELDS]->(:Entity {name:'Thunderbolt'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V06",
+      "question": "Who is described as infinite?",
+      "cypher": "MATCH p=(s:Entity)-[:IS]->(:Entity {name:'Infinite'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V07",
+      "question": "Who creates the universe?",
+      "cypher": "MATCH p=(s:Entity)-[:CREATES]->(:Entity {name:'Universe'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V08",
+      "question": "Which text describes dreams?",
+      "cypher": "MATCH p=(s:Entity)-[:DESCRIBES]->(:Entity {name:'Dreams'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V09",
+      "question": "Who teaches chants?",
+      "cypher": "MATCH p=(s:Entity)-[:TEACHES]->(:Entity {name:'chants'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V10",
+      "question": "Which scripture contains mantras?",
+      "cypher": "MATCH p=(s:Entity)-[:CONTAINS]->(:Entity {name:'mantras'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V11",
+      "question": "Who provides light?",
+      "cypher": "MATCH p=(s:Entity)-[:PROVIDES]->(:Entity {name:'Light'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V12",
+      "question": "Who guards cosmic law?",
+      "cypher": "MATCH p=(s:Entity)-[:GUARDS]->(:Entity {name:'Cosmic law'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V13",
+      "question": "Who represents cosmic vibration?",
+      "cypher": "MATCH p=(s:Entity)-[:REPRESENTS]->(:Entity {name:'Cosmic vibration'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V14",
+      "question": "Who sustains life?",
+      "cypher": "MATCH p=(s:Entity)-[:SUSTAINS]->(:Entity {name:'Life'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "V15",
+      "question": "Who removes ignorance?",
+      "cypher": "MATCH p=(s:Entity)-[:REMOVES]->(:Entity {name:'Ignorance'}) RETURN s.name AS Answer, p;"
+    }
+  ]
+}

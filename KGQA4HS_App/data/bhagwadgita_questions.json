@@ -1,0 +1,80 @@
+{
+  "domain": "BhagavadGita",
+  "questions": [
+    {
+      "id": "G01",
+      "question": "Who preserved the Gita lineage?",
+      "cypher": "MATCH p=(s:Entity)-[:PRESERVED]->(:Entity {name:'GitaLineage'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G02",
+      "question": "Who taught Manu?",
+      "cypher": "MATCH p=(s:Entity)-[:TAUGHT]->(:Entity {name:'Manu'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G03",
+      "question": "Who received the ancient Gita?",
+      "cypher": "MATCH p=(s:Entity)-[:RECEIVED]->(:Entity {name:'AncientGita'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G04",
+      "question": "Who determines rebirth?",
+      "cypher": "MATCH p=(s:Entity)-[:DETERMINES]->(:Entity {name:'Rebirth'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G05",
+      "question": "Who recorded the Kurukshetra dialogue?",
+      "cypher": "MATCH p=(s:Entity)-[:RECORDED]->(:Entity {name:'KurukshetraDialogue'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G06",
+      "question": "Who compiled the Mahabharata?",
+      "cypher": "MATCH p=(s:Entity)-[:COMPILED]->(:Entity {name:'Mahabharata'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G07",
+      "question": "Who preserved the Gita tradition?",
+      "cypher": "MATCH p=(s:Entity)-[:PRESERVED]->(:Entity {name:'GitaTradition'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G08",
+      "question": "Who stabilizes the mind?",
+      "cypher": "MATCH p=(s:Entity)-[:STABILIZES]->(:Entity {name:'Mind'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G09",
+      "question": "Who governs existence?",
+      "cypher": "MATCH p=(s:Entity)-[:GOVERNS]->(:Entity {name:'Existence'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G10",
+      "question": "Who sustains life?",
+      "cypher": "MATCH p=(s:Entity)-[:SUSTAINS]->(:Entity {name:'Life'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G11",
+      "question": "Who purifies action?",
+      "cypher": "MATCH p=(s:Entity)-[:PURIFIES]->(:Entity {name:'Action'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G12",
+      "question": "Who elevates towards liberation?",
+      "cypher": "MATCH p=(s:Entity)-[:ELEVATES]->(:Entity {name:'Liberation'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G13",
+      "question": "Who creates imbalance?",
+      "cypher": "MATCH p=(s:Entity)-[:CREATES]->(:Entity {name:'Imbalance'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G14",
+      "question": "Who leads to discipline?",
+      "cypher": "MATCH p=(s:Entity)-[:LEADS]->(:Entity {name:'Discipline'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "G15",
+      "question": "Who drives action?",
+      "cypher": "MATCH p=(s:Entity)-[:DRIVES]->(:Entity {name:'Action'}) RETURN s.name AS Answer, p;"
+    }
+  ]
+}

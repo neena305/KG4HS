@@ -1,0 +1,119 @@
+{
+  "domain": "ramayana",
+  "questions": [
+{
+  "id": "R01",
+  "question": "Who taught Hanuman the art of speech?",
+  "cypher": "MATCH p=(s:Entity)-[:TAUGHT]->(o:Entity {name:'Hanuman'}) RETURN s.name AS Answer, p;"
+},
+    {
+      "id": "R02",
+      "question": "Who blessed Hanuman with immortality?",
+      "cypher": "MATCH p=(s:Entity)-[:BLESSED]->(o:Entity {name:'Hanuman'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "R03",
+      "question": "Who gave the bow to Parashurama?",
+      "cypher": "MATCH p=(s:Entity)-[:GIFTED]->(o:Entity {name:'Parashurama'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "R04",
+      "question": "Who invited Rama to Mithila?",
+      "cypher": "MATCH p=(s:Entity)-[:INVITED]->(o:Entity {name:'Rama'}) RETURN s.name AS Answer, p;"
+    },
+    {
+      "id": "R05",
+      "question": "Who welcomed Rama in Lanka first?",
+      "cypher": "MATCH p=(s:Entity)-[:WELCOMED]->(o:Entity {name:'Rama'}) RETURN s.name AS Answer, p;"
+    },
+{
+  "id": "R06",
+  "question": "Who welcomed Rama in Lanka first?",
+  "cypher": "MATCH p=(s:Entity {name:'Vibhishana'})-[:WELCOMED]->(o:Entity {name:'Rama'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R07",
+  "question": "Who narrated the Ramayana to Rama’s sons?",
+  "cypher": "MATCH p=(s:Entity {name:'Valmiki'})-[:NARRATED]->(o:Entity {name:'Ramayana'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R08",
+  "question": "Who instructed Vibhishana to join Rama?",
+  "cypher": "MATCH p=(s:Entity {name:'Kaikesi'})-[:ADVISED]->(o:Entity {name:'Vibhishana'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R09",
+  "question": "Who led the bear army in the war?",
+  "cypher": "MATCH p=(s:Entity {name:'Jambavan'})-[:LED]->(o:Entity {name:'BearArmy'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R10",
+  "question": "Who healed Lakshmana after battle?",
+  "cypher": "MATCH p=(s:Entity {name:'Sushena'})-[:HEALED]->(o:Entity {name:'Lakshmana'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R11",
+  "question": "Who informed Sita about Rama’s victory?",
+  "cypher": "MATCH p=(s:Entity {name:'Hanuman'})-[:INFORMED]->(o:Entity {name:'Sita'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R12",
+  "question": "Who carried Rama’s message to Sugriva?",
+  "cypher": "MATCH p=(s:Entity {name:'Hanuman'})-[:DELIVERED]->(o:Entity {name:'Message'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R13",
+  "question": "Who first saw Sita in Ashoka Vatika?",
+  "cypher": "MATCH p=(s:Entity {name:'Hanuman'})-[:SAW]->(o:Entity {name:'Sita'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R14",
+  "question": "Who broke the curse on Kabandha?",
+  "cypher": "MATCH p=(s:Entity {name:'Rama'})-[:BROKE]->(o:Entity {name:'Kabandha'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R15",
+  "question": "Who built the first shelter in forest exile?",
+  "cypher": "MATCH p=(s:Entity {name:'Lakshmana'})-[:BUILT]->(o:Entity {name:'Hut'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R16",
+  "question": "Who comforted Sita after golden deer incident?",
+  "cypher": "MATCH p=(s:Entity {name:'Lakshmana'})-[:COMFORTED]->(o:Entity {name:'Sita'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R17",
+  "question": "Who brought news of Ravana’s death to Lanka?",
+  "cypher": "MATCH p=(s:Entity {name:'Vibhishana'})-[:REPORTED]->(o:Entity {name:'Death'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R18",
+  "question": "Who carried Rama’s sandals to Ayodhya?",
+  "cypher": "MATCH p=(s:Entity {name:'Bharata'})-[:CARRIED]->(o:Entity {name:'Sandals'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R19",
+  "question": "Who trained Lava and Kusha in warfare?",
+  "cypher": "MATCH p=(s:Entity {name:'Valmiki'})-[:TRAINED]->(o:Entity {name:'LavaKusha'}) RETURN s.name AS Answer, p;"
+},
+
+{
+  "id": "R20",
+  "question": "Who sang the Ramayana before Rama?",
+  "cypher": "MATCH p=(s:Entity {name:'Kusha'})-[:SANG]->(o:Entity {name:'Ramayana'}) RETURN s.name AS Answer, p;"
+}
+  ]
+}

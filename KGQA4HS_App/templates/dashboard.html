@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KGQA4HS Dashboard</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+
+<body>
+  <div class="page-bg"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="om">ॐ</div>
+      <div>
+        <div class="brand-title">KGQA4HS</div>
+        <div class="brand-sub">Knowledge Graph Question Answering for Hindu Scriptures</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#categories">Categories</a>
+      <a href="#hierarchy">Hierarchy</a>
+      <a href="#workspace">Workspace</a>
+      <a href="javascript:void(0)" id="aboutToggleBtn">About</a>
+      <a href="#entities">Entities</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-banner">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1>Explore Hindu Scriptures through<br>Knowledge Graphs</h1>
+        <p>Interactive question answering with answer, table, and subgraph visualization.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+
+    <!-- ABOUT PROJECT -->
+    <section class="section" id="aboutSection" style="display:none;">
+      <h2 class="section-title">About Project</h2>
+      <div class="about-box">
+        <p>
+          KGQA4HS is a domain-specific Knowledge Graph Question Answering system for Hindu Scriptures.
+          It allows users to ask natural language questions and retrieve answers from structured graph data.
+          The system covers Ramayana, Mahabharata, Vedas, and Bhagavad Gita, and presents results in the form of
+          answer text, tabular output, and subgraph visualization for better interpretability.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Objective</h3>
+            <p>To support explainable question answering over Hindu scripture knowledge graphs.</p>
+          </div>
+          <div class="about-card">
+            <h3>Technologies</h3>
+            <p>Flask, Neo4j, HTML, CSS, JavaScript, and Vis Network.</p>
+          </div>
+          <div class="about-card">
+            <h3>Domains</h3>
+            <p>Ramayana, Mahabharata, Vedas, and Bhagavad Gita.</p>
+          </div>
+          <div class="about-card">
+            <h3>Output</h3>
+            <p>Answer, table, performance time, and graph-based reasoning path.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section" id="categories">
+      <h2 class="section-title">Knowledge Categories</h2>
+
+      <div class="card-row">
+        <div class="kcard k-sruti">
+          <div class="kicon">ॐ</div>
+          <div class="ktitle">Śruti</div>
+          <div class="kcount">Vedas</div>
+        </div>
+
+        <div class="kcard k-smriti">
+          <div class="kicon">📜</div>
+          <div class="ktitle">Smṛti</div>
+          <div class="kcount">Mahabharata</div>
+        </div>
+
+        <div class="kcard k-itihasa">
+          <div class="kicon">🏛️</div>
+          <div class="ktitle">Itihasa</div>
+          <div class="kcount">Ramayana</div>
+        </div>
+
+        <div class="kcard k-gita">
+          <div class="kicon">🔥</div>
+          <div class="ktitle">Bhagavad Gita</div>
+          <div class="kcount">Gita</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIERARCHY -->
+    <section class="section" id="hierarchy">
+      <h2 class="section-title">Hindu Scriptures Hierarchy</h2>
+
+      <div class="panel paper">
+        <div class="panel-title">Hierarchy Tree</div>
+
+        <div class="tree">
+          <div class="tree-block">
+            <div class="tree-head">Śruti</div>
+            <div class="tree-sub">• Vedas</div>
+            <div class="tree-sub">• Upanishads</div>
+          </div>
+
+          <div class="tree-block">
+            <div class="tree-head">Smṛti</div>
+            <div class="tree-sub">• Itihasa</div>
+            <div class="tree-sub">• Purana</div>
+            <div class="tree-sub">• Dharmasastra</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKSPACE -->
+    <section class="section" id="workspace">
+      <h2 class="section-title">Question Answering Workspace</h2>
+
+      <div class="workspace-grid">
+
+        <!-- LEFT: ANSWER PANEL -->
+        <div class="panel paper answer-panel" id="answer">
+          <div class="panel-title">Answer + Table + Subgraph</div>
+
+          <div class="matchLine" id="matchLine">Matched: —</div>
+          <div class="qLine" id="qLine">Type a question and click Ask.</div>
+          <div class="ansLine" id="ansLine">—</div>
+          <div id="timeLine">Response Time: —</div>
+          <div id="perfBadge">⚡ Response Time: —</div>
+
+          <div id="tableWrap" class="tableWrap" style="margin-top:12px; display:none;">
+            <table id="answerTable"></table>
+          </div>
+
+          <div class="legend-row">
+            <div class="legend-item"><span class="legend-dot" style="background:#f4c542;"></span>Ramayana</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#8ecae6;"></span>Mahabharata</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#90be6d;"></span>Vedas</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#c77dff;"></span>Bhagavad Gita</div>
+          </div>
+
+          <div class="graphBox">
+            <div id="graphCanvas"></div>
+          </div>
+        </div>
+
+        <!-- RIGHT: ASK PANEL -->
+        <div class="panel paper ask-panel">
+          <div class="panel-title">Ask Question</div>
+
+          <div class="ask-box">
+            <label class="ask-label">Select Domain</label>
+            <select id="domainSelectTop" class="select ask-select">
+              <option value="ramayana" selected>Ramayana</option>
+              <option value="mahabharata">Mahabharata</option>
+              <option value="vedas">Vedas</option>
+              <option value="bhagwadgita">Bhagavad Gita</option>
+            </select>
+
+            <label class="ask-label" style="margin-top:14px;">Type Question</label>
+            <input id="typedQ" class="input ask-input" type="text" placeholder="Type a question..." />
+
+            <div class="ask-actions">
+              <button id="askTopBtn" class="btn" type="button">Ask</button>
+              <button id="resetBtn" class="btn" type="button">Reset Graph</button>
+              <button id="fitBtn" class="btn" type="button">Fit Graph</button>
+              <button id="downloadGraphBtn" class="btn" type="button">Download PNG</button>
+              <button id="snapBtn" class="btn" type="button">Screenshot Mode</button>
+            </div>
+          </div>
+
+          <div class="mini-help">
+            Example:
+            <br>Who blessed Hanuman with immortality?
+            <br>Who taught Hanuman the art of speech?
+            <br>Ask → Fit Graph → Screenshot Mode / Download PNG for paper figure.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ENTITY SEARCH -->
+    <section class="section" id="entities">
+      <h2 class="section-title">Search Major Entities</h2>
+      <div class="entity-box">
+        <p>Search major entities like Rama, Hanuman, Sita, Krishna, Arjuna, Ravana.</p>
+
+        <div class="entity-search-row">
+          <input id="entityInput" type="text" placeholder="Search entity like Rama, Hanuman, Krishna..." />
+          <button id="entitySearchBtn" class="btn" type="button">Search Entity</button>
+        </div>
+
+        <div class="quick-entities">
+          <button type="button" onclick="quickEntity('Rama')">Rama</button>
+          <button type="button" onclick="quickEntity('Hanuman')">Hanuman</button>
+          <button type="button" onclick="quickEntity('Sita')">Sita</button>
+          <button type="button" onclick="quickEntity('Krishna')">Krishna</button>
+          <button type="button" onclick="quickEntity('Arjuna')">Arjuna</button>
+        </div>
+
+        <div id="entityResult" class="entity-result">Entity details will appear here.</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      KGQA4HS • Portal Dashboard UI
+    </footer>
+
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
