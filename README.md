@@ -1,5 +1,3 @@
-
-
 ## 🔍 Research Work (PhD)
 
 **Title:** *An Intelligent Approach to Knowledge Graph Construction for Bharatiya Hindu Scriptures*
@@ -86,7 +84,11 @@ Natural Language Query
 → Tabular + Graph Output  
 
 ---
+## 📄 Publication
 
+**Knowledge Graph Construction for Hindu Scriptures (KG4HS)**  
+Published in *International Journal of Information Technology (Springer, Q1)*, 2025.  
+🔗 [Read Paper](https://link.springer.com/article/10.1007/s41870-025-02837-x#citeas)
 ## 🛠️ Technology Stack
 
 - **Backend:** Flask (Python)  
